@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/758792/Projects/Personal/Patterns/Exercises/Exercises.csproj": {}
+  },
+  "projects": {
+    "/Users/758792/Projects/Personal/Patterns/Exercises/Exercises.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/758792/Projects/Personal/Patterns/Exercises/Exercises.csproj",
+        "projectName": "Exercises",
+        "projectPath": "/Users/758792/Projects/Personal/Patterns/Exercises/Exercises.csproj",
+        "packagesPath": "/Users/758792/.nuget/packages/",
+        "outputPath": "/Users/758792/Projects/Personal/Patterns/Exercises/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/758792/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard1.6"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard1.6": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard1.6": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[1.6.1, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
