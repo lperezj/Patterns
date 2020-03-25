@@ -1,0 +1,16 @@
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Main.deps.json
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Main.runtimeconfig.json
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Main.runtimeconfig.dev.json
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Main.dll
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Main.pdb
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Exercises.dll
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Patterns.dll
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Patterns.pdb
+/Users/758792/Projects/Personal/Patterns/Main/bin/Debug/netcoreapp3.1/Exercises.pdb
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.csprojAssemblyReference.cache
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.csproj.CoreCompileInputs.cache
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.AssemblyInfoInputs.cache
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.AssemblyInfo.cs
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.csproj.CopyComplete
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.dll
+/Users/758792/Projects/Personal/Patterns/Main/obj/Debug/netcoreapp3.1/Main.pdb

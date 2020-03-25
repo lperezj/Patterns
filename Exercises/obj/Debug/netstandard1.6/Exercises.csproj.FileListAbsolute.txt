@@ -1,0 +1,9 @@
+/Users/758792/Projects/Personal/Patterns/Exercises/bin/Debug/netstandard1.6/Exercises.deps.json
+/Users/758792/Projects/Personal/Patterns/Exercises/bin/Debug/netstandard1.6/Exercises.dll
+/Users/758792/Projects/Personal/Patterns/Exercises/bin/Debug/netstandard1.6/Exercises.pdb
+/Users/758792/Projects/Personal/Patterns/Exercises/obj/Debug/netstandard1.6/Exercises.csprojAssemblyReference.cache
+/Users/758792/Projects/Personal/Patterns/Exercises/obj/Debug/netstandard1.6/Exercises.csproj.CoreCompileInputs.cache
+/Users/758792/Projects/Personal/Patterns/Exercises/obj/Debug/netstandard1.6/Exercises.AssemblyInfoInputs.cache
+/Users/758792/Projects/Personal/Patterns/Exercises/obj/Debug/netstandard1.6/Exercises.AssemblyInfo.cs
+/Users/758792/Projects/Personal/Patterns/Exercises/obj/Debug/netstandard1.6/Exercises.dll
+/Users/758792/Projects/Personal/Patterns/Exercises/obj/Debug/netstandard1.6/Exercises.pdb

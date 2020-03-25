@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Builder\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Factories\HotMachine\" />
+  </ItemGroup>
 </Project>

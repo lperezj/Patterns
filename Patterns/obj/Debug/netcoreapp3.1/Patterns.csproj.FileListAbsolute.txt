@@ -1,0 +1,8 @@
+/Users/758792/Projects/Personal/Patterns/Patterns/bin/Debug/netcoreapp3.1/Patterns.deps.json
+/Users/758792/Projects/Personal/Patterns/Patterns/bin/Debug/netcoreapp3.1/Patterns.dll
+/Users/758792/Projects/Personal/Patterns/Patterns/bin/Debug/netcoreapp3.1/Patterns.pdb
+/Users/758792/Projects/Personal/Patterns/Patterns/obj/Debug/netcoreapp3.1/Patterns.csproj.CoreCompileInputs.cache
+/Users/758792/Projects/Personal/Patterns/Patterns/obj/Debug/netcoreapp3.1/Patterns.AssemblyInfoInputs.cache
+/Users/758792/Projects/Personal/Patterns/Patterns/obj/Debug/netcoreapp3.1/Patterns.AssemblyInfo.cs
+/Users/758792/Projects/Personal/Patterns/Patterns/obj/Debug/netcoreapp3.1/Patterns.dll
+/Users/758792/Projects/Personal/Patterns/Patterns/obj/Debug/netcoreapp3.1/Patterns.pdb

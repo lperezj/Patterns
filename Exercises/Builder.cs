@@ -2,17 +2,17 @@
 
 namespace Exercises
 {
-    public class CodeBuilder
+    public class Builder
     {
         public string className;
         Dictionary<string, string> fields = new Dictionary<string, string>();
 
-        public CodeBuilder(string className)
+        public Builder(string className)
         {
             this.className = className;
         }
 
-        public CodeBuilder AddField(string type, string name)
+        public Builder AddField(string type, string name)
         {
             fields.Add(type, name);
             return this;
