@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Exercises;
 using Patterns;
+using Patterns.Decorator;
 using Patterns.Factories;
 
 namespace Main
@@ -11,13 +12,14 @@ namespace Main
         enum Pattern
         {
             Fluent,
-            Factory
+            Factory,
+            Decorator
         }
 
         static async Task Main(string[] args)
         {
 
-            var patterToExecute = Pattern.Factory;
+            var patterToExecute = Pattern.Decorator;
 
             switch (patterToExecute)
             {
@@ -28,7 +30,7 @@ namespace Main
 
                     Console.WriteLine(luis1);
 
-                    Person me = new PersonBuilder().identity.Me("Luis", "Perez Jimenez")
+                    Patterns.Person me = new PersonBuilder().identity.Me("Luis", "Perez Jimenez")
                                                    .works.At("Cognizant").AsA("Xamarin Tech Lead").Income(2019)
                                                    .lives.In("Madrid").At("Rafaela Bonilla").WithPostCode("28028");
 
@@ -61,6 +63,13 @@ namespace Main
 
                     #endregion
                     break;
+
+                case Pattern.Decorator:
+                    CodeBuilder s = "hello ";
+                    s += "world"; 
+                    Console.WriteLine(s);
+                    break;
+
             }
         }
     }
