@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Exercises;
 using Patterns;
+using Patterns.Command;
 using Patterns.Decorator;
 using Patterns.Factories;
 using Patterns.Proxy;
@@ -26,13 +29,14 @@ namespace Main
             Fluent,
             Factory,
             Decorator,
-            Proxy
+            Proxy,
+            Command
         }
 
         static async Task Main(string[] args)
         {
 
-            var patterToExecute = Pattern.Proxy;
+            var patterToExecute = Pattern.Command;
 
             switch (patterToExecute)
             {
@@ -101,6 +105,32 @@ namespace Main
                     #endregion
                     break;
 
+                case Pattern.Command:
+                    #region Command
+                    var ba = new Patterns.Command.BankAccount();
+                    var commands = new List<BankAccountCommand>
+                    {
+                        new BankAccountCommand(ba,BankAccountCommand.Action.Deposit, 100),
+                        new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw, 1000)
+                    };
+
+                    Console.WriteLine(ba);
+
+                    foreach(var comm in commands)
+                    {
+                        comm.Call();
+                    }
+
+                    Console.WriteLine(ba);
+
+                    foreach (var comm in Enumerable.Reverse(commands))
+                    {
+                        comm.Undo();
+                    }
+
+                    Console.WriteLine(ba);
+                    break;
+                #endregion
             }
         }
     }

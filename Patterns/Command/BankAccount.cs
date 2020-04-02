@@ -4,6 +4,8 @@ namespace Patterns.Command
     public interface ICommand
     {
         void Call();
+
+        void Undo();
     }
 
     public class BankAccount
@@ -17,11 +19,22 @@ namespace Patterns.Command
             Console.WriteLine($"Deposited {amount}, balance is now {balance}");
         }
 
-        public void Withdraw(int amount)
+        public bool Withdraw(int amount)
         {
-            balance -= amount;
-            Console.WriteLine($"Withdrew {amount}, balance is now {balance}");
-        } 
+            if (balance - amount >= overdraftLimit)
+            {
+                balance -= amount;
+                Console.WriteLine($"Withdrew {amount}, balance is now {balance}");
+                return true;
+            }
+
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return $"{nameof(balance)}: {balance}";
+        }
     }
 
     public class BankAccountCommand : ICommand
@@ -36,6 +49,7 @@ namespace Patterns.Command
 
         private Action action;
         private int amount;
+        private bool succeeded;
 
         public BankAccountCommand(BankAccount account, Action action, int amount)
         {
@@ -51,9 +65,26 @@ namespace Patterns.Command
             {
                 case Action.Deposit:
                     account.Deposit(amount);
+                    succeeded = true;
                     break;
                 case Action.Withdraw:
+                    succeeded = account.Withdraw(amount);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        public void Undo()
+        {
+            if (!succeeded) return;
+            switch (action)
+            {
+                case Action.Deposit:
                     account.Withdraw(amount);
+                    break;
+                case Action.Withdraw:
+                    account.Deposit(amount);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
