@@ -8,6 +8,7 @@ using Patterns.Command;
 using Patterns.Decorator;
 using Patterns.Factories;
 using Patterns.Interpreter;
+using Patterns.Memento;
 using Patterns.Proxy;
 
 namespace Main
@@ -32,13 +33,14 @@ namespace Main
             Decorator,
             Proxy,
             Command,
-            Interpreter
+            Interpreter,
+            Memento
         }
 
         static async Task Main(string[] args)
         {
 
-            var patterToExecute = Pattern.Interpreter;
+            var patterToExecute = Pattern.Memento;
 
             switch (patterToExecute)
             {
@@ -142,6 +144,21 @@ namespace Main
                     var parsed = Interpreter.Parse(tokens);
                     Console.WriteLine($"{input} = {parsed.Value}");
                     break;
+
+                case Pattern.Memento:
+                    var mba = new Patterns.Memento.BankAccount(100);
+                    mba.Deposit(50);
+                    mba.Deposit(25);
+                    Console.WriteLine(mba);
+
+                    mba.Undo();
+                    Console.WriteLine($"Undo 1: {mba}");
+                    mba.Undo();
+                    Console.WriteLine($"Undo 2: {mba}");
+                    mba.Redo();
+                    Console.WriteLine($"Redo 2: {mba}");
+                    break;
+                    
             }
         }
     }
