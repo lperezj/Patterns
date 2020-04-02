@@ -11,5 +11,10 @@
     <Folder Include="Factories\HotMachine\" />
     <Folder Include="Adapter\" />
     <Folder Include="Decorator\" />
+    <Folder Include="Proxy\" />
+    <Folder Include="Command\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ImpromptuInterface" Version="7.0.1" />
   </ItemGroup>
 </Project>

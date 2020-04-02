@@ -4,22 +4,35 @@ using Exercises;
 using Patterns;
 using Patterns.Decorator;
 using Patterns.Factories;
+using Patterns.Proxy;
 
 namespace Main
 {
+    public class Creature
+    {
+        private Property<int> agility = new Property<int>();
+
+        public int Agility
+        {
+            get => agility.Value;
+            set => agility.Value = value;
+        }
+    }
+
     class Program
     {
         enum Pattern
         {
             Fluent,
             Factory,
-            Decorator
+            Decorator,
+            Proxy
         }
 
         static async Task Main(string[] args)
         {
 
-            var patterToExecute = Pattern.Decorator;
+            var patterToExecute = Pattern.Proxy;
 
             switch (patterToExecute)
             {
@@ -44,6 +57,8 @@ namespace Main
                     break;
                 case Pattern.Factory:
                     #region Factories
+                    // Uncomment AbstractFactories class
+
                     //var point = Point.Factory.NewPolarPoint(1, Math.PI / 2);
                     //Console.WriteLine(point);
 
@@ -68,6 +83,22 @@ namespace Main
                     CodeBuilder s = "hello ";
                     s += "world"; 
                     Console.WriteLine(s);
+                    break;
+
+                case Pattern.Proxy:
+                    #region Proxy Protect
+                    ICar car1 = new CarProxy(new Driver(12)); 
+                    car1.Drive();
+                    ICar car2 = new CarProxy(new Driver(22));
+                    car2.Drive();
+                    #endregion
+
+                    #region Proxy Property
+                    var c = new Creature();
+                    c.Agility = 10; // c.set_Agility(10) xxxxxxxxxxxxx
+                                    // c.Agility = new Property<int>(10)
+                    c.Agility = 10; // --> Not asigned
+                    #endregion
                     break;
 
             }
