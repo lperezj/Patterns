@@ -13,6 +13,7 @@
     <Folder Include="Decorator\" />
     <Folder Include="Proxy\" />
     <Folder Include="Command\" />
+    <Folder Include="Interpreter\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ImpromptuInterface" Version="7.0.1" />

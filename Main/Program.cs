@@ -7,6 +7,7 @@ using Patterns;
 using Patterns.Command;
 using Patterns.Decorator;
 using Patterns.Factories;
+using Patterns.Interpreter;
 using Patterns.Proxy;
 
 namespace Main
@@ -30,13 +31,14 @@ namespace Main
             Factory,
             Decorator,
             Proxy,
-            Command
+            Command,
+            Interpreter
         }
 
         static async Task Main(string[] args)
         {
 
-            var patterToExecute = Pattern.Command;
+            var patterToExecute = Pattern.Interpreter;
 
             switch (patterToExecute)
             {
@@ -131,6 +133,15 @@ namespace Main
                     Console.WriteLine(ba);
                     break;
                 #endregion
+
+                case Pattern.Interpreter:
+                    var input = "(13+4)-(12+1)";
+                    var tokens = Interpreter.Lex(input);
+                    Console.WriteLine(string.Join("\t", tokens));
+
+                    var parsed = Interpreter.Parse(tokens);
+                    Console.WriteLine($"{input} = {parsed.Value}");
+                    break;
             }
         }
     }
