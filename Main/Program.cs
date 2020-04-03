@@ -10,6 +10,7 @@ using Patterns.Factories;
 using Patterns.Interpreter;
 using Patterns.Memento;
 using Patterns.Proxy;
+using static Patterns.StateMachine.PhoneState;
 
 namespace Main
 {
@@ -34,13 +35,14 @@ namespace Main
             Proxy,
             Command,
             Interpreter,
-            Memento
+            Memento,
+            StateMachine
         }
 
         static async Task Main(string[] args)
         {
 
-            var patterToExecute = Pattern.Memento;
+            var patterToExecute = Pattern.StateMachine;
 
             switch (patterToExecute)
             {
@@ -157,6 +159,28 @@ namespace Main
                     Console.WriteLine($"Undo 2: {mba}");
                     mba.Redo();
                     Console.WriteLine($"Redo 2: {mba}");
+                    break;
+
+                case Pattern.StateMachine:
+                    var state = State.OffHook;
+                    while (true)
+                    {
+                        Console.WriteLine($"The phone is currently {state}");
+                        Console.WriteLine("Select a trigger:");
+
+                        
+                        // foreach to for
+                        for (var i = 0; i < Rules[state].Count; i++)
+                        {
+                            var (t, _) = Rules[state][i];
+                            Console.WriteLine($"{i}. {t}");
+                        }
+
+                        int inputLine = int.Parse(Console.ReadLine());
+
+                        var (_, st) = Rules[state][inputLine];
+                        state = st;
+                    }
                     break;
                     
             }
